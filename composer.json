@@ -1,8 +1,14 @@
 {
-  "name": "gie/site_map_generator",
+  "name": "jlchassaing/ezsitemapgenerator",
   "license": "MIT",
   "type": "project",
   "description": "eZ Platform SiteMap generator",
+  "authors": [
+    {
+      "name": "Jean-Luc CHASSAING",
+     "email":"jlchasaing@gmail.com"
+    }
+    ],
   "autoload": {
     "psr-4": {
       "Gie\\SiteMapGeneratorBundle\\": "src/bundle/",

@@ -4,8 +4,35 @@ This bundle will build the xml sitemap of your website.
 
 ## install
 
+add repository to your composer.json
 
-to enable it install it from git, it will be pushed to packagist when it will reach a usable stage.
+the bundle will be pushed to packagist further on.
+
+https://github.com/jlchassaing/ezsitemapgenerator
+```yaml
+
+{
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/jlchassaing/ezsitemapgenerator.git"
+    }
+  ]
+}
+
+```
+
+and add package :
+```yaml
+composer require jlchassaing/ezsitemapgenerator:dev-master
+```
+
+Then add bundle to kernel : 
+
+```php
+new Gie\SiteMapGeneratorBundle\GieSiteMapGeneratorBundle()
+
+```
 
 add routing config to the routing.yml
 
@@ -40,4 +67,5 @@ The default route is /sitemap.xml
 
 ## Todo
  Set the limit in configuration
+ .../...
  
