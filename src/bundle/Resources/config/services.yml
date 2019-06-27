@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Gie\SiteMapGenerator\Loader\SiteMapLoader:
+    arguments:
+      $siteMapConfig: '$config;gie_site_map_generator$'
+
+  Gie\SiteMapGeneratorBundle\Controller\SiteMapController:
+    arguments:
+      $siteMapConfig: '$config;gie_site_map_generator$'
+
+  ez_sitemap:
+    alias : Gie\SiteMapGeneratorBundle\Controller\SiteMapController
+    public: true

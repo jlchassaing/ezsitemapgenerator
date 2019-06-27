@@ -1,0 +1,21 @@
+_sitemap:
+  path: /sitemap.xml
+  defaults:
+    _controller: ez_sitemap:indexAction
+    groupby: limit
+
+_sitemap_location:
+  path: /sitemap_{name}_{locationId}.xml
+  defaults:
+    _controller: ez_sitemap:locationAction
+  requirements:
+    locationId: '\d+'
+
+
+_sitemap_part:
+  path: /sitemap_{part}.xml
+  defaults:
+    _controller: ez_sitemap:partAction
+    part: 1
+
+

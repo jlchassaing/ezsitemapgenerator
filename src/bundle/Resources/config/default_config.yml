@@ -1,0 +1,5 @@
+parameters:
+  gie_site_map_generator.default.config:
+    content_types: [article, folder]
+    container_types: [folder]
+    grouping_type: limit

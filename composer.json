@@ -1,0 +1,17 @@
+{
+  "name": "gie/site_map_generator",
+  "license": "MIT",
+  "type": "project",
+  "description": "eZ Platform SiteMap generator",
+  "autoload": {
+    "psr-4": {
+      "Gie\\SiteMapGeneratorBundle\\": "src/bundle/",
+      "Gie\\SiteMapGenerator\\": "src/lib/"
+    }
+  },
+  "require": {
+    "php": ">=7.1",
+    "symfony/symfony": "^3.4",
+    "ezsystems/ezpublish-kernel": "^7.5"
+  }
+}

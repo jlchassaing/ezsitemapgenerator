@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   {%- if type == 'limit' -%}
+    {% for i in 1..parts %}
+    <sitemap>
+        <loc>{{ url('_sitemap_part',{part: i}) }}</loc>
+        <lastmod>{{ "now"|date("c") }}</lastmod>
+    </sitemap>
+    {% endfor %}
+    {%- endif -%}
+    {%- if type == 'roots' -%}
+        {% for part in parts %}
+            <sitemap>
+                <loc>{{ url('_sitemap_location',{name: part.name, locationId: part.locationId}) }}</loc>
+                <lastmod>{{ "now"|date("c") }}</lastmod>
+            </sitemap>
+        {% endfor %}
+    {%- endif -%}
+</sitemapindex>
